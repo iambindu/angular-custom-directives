@@ -14,11 +14,13 @@
 <h1>Angular Directive</h1>
 	<div ng-controller="myController">
 		{{message}}
-		<div>
-			<my-customer-details-directive></my-customer-details-directive>
-			<div my-customer-details-directive></div>
-		<div class="my-customer-details-directive"></div>
-		<!-- directive: my-customer-details-directive -->
+		<br>
+		<h3>{{companyName}}</h3>
+		<div ng-repeat="user in userDetails">
+			<my-customer-details-directive
+				company-name="{{company}}" user-details="user" change="change()">
+			</my-customer-details-directive>
+
 		</div>
 	</div>
 </div>
